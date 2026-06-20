@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CUTE DOODLE BACKGROUND -->
+  <svg class="doodle-bg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <!-- Stars -->
+    <text x="60" y="80" font-size="22" fill="#a78bfa">✦</text>
+    <text x="200" y="50" font-size="14" fill="#f9a8d4">✦</text>
+    <text x="1300" y="100" font-size="18" fill="#a78bfa">✦</text>
+    <text x="1380" y="60" font-size="12" fill="#f9a8d4">✦</text>
+    <text x="900" y="30" font-size="16" fill="#6ee7b7">✦</text>
+    <text x="500" y="70" font-size="10" fill="#fcd34d">✦</text>
+    <text x="100" y="780" font-size="20" fill="#f9a8d4">✦</text>
+    <text x="1350" y="820" font-size="14" fill="#a78bfa">✦</text>
+    <text x="700" y="860" font-size="16" fill="#6ee7b7">✦</text>
+
+    <!-- Hearts -->
+    <text x="40" y="200" font-size="28" fill="#f9a8d4" opacity="0.7">♡</text>
+    <text x="1380" y="300" font-size="22" fill="#f9a8d4" opacity="0.6">♡</text>
+    <text x="150" y="600" font-size="18" fill="#fca5a5" opacity="0.5">♡</text>
+    <text x="1300" y="650" font-size="24" fill="#f9a8d4" opacity="0.6">♡</text>
+    <text x="750" y="880" font-size="16" fill="#f9a8d4" opacity="0.5">♡</text>
+
+    <!-- Flowers -->
+    <text x="80" y="450" font-size="32" fill="#fcd34d" opacity="0.6">✿</text>
+    <text x="1360" y="500" font-size="28" fill="#86efac" opacity="0.6">✿</text>
+    <text x="300" y="850" font-size="24" fill="#fcd34d" opacity="0.5">✿</text>
+    <text x="1150" y="820" font-size="30" fill="#a78bfa" opacity="0.4">✿</text>
+    <text x="600" y="50" font-size="20" fill="#f9a8d4" opacity="0.5">✿</text>
+
+    <!-- Clouds doodle -->
+    <ellipse cx="120" cy="140" rx="55" ry="28" fill="#e9d5ff" opacity="0.4"/>
+    <ellipse cx="155" cy="125" rx="38" ry="24" fill="#e9d5ff" opacity="0.4"/>
+    <ellipse cx="85" cy="130" rx="30" ry="20" fill="#e9d5ff" opacity="0.4"/>
+
+    <ellipse cx="1320" cy="200" rx="60" ry="30" fill="#fce7f3" opacity="0.4"/>
+    <ellipse cx="1360" cy="185" rx="40" ry="25" fill="#fce7f3" opacity="0.4"/>
+    <ellipse cx="1280" cy="192" rx="32" ry="20" fill="#fce7f3" opacity="0.4"/>
+
+    <!-- Small circles -->
+    <circle cx="250" cy="150" r="6" fill="#c4b5fd" opacity="0.5"/>
+    <circle cx="270" cy="130" r="4" fill="#f9a8d4" opacity="0.5"/>
+    <circle cx="1200" cy="120" r="5" fill="#6ee7b7" opacity="0.5"/>
+    <circle cx="1220" cy="140" r="7" fill="#c4b5fd" opacity="0.4"/>
+    <circle cx="400" cy="800" r="5" fill="#f9a8d4" opacity="0.5"/>
+    <circle cx="420" cy="820" r="4" fill="#c4b5fd" opacity="0.4"/>
+    <circle cx="1050" cy="780" r="6" fill="#6ee7b7" opacity="0.5"/>
+
+    <!-- Sparkles -->
+    <text x="350" y="120" font-size="20" fill="#fcd34d" opacity="0.7">✨</text>
+    <text x="1100" y="80" font-size="18" fill="#fcd34d" opacity="0.6">✨</text>
+    <text x="50" y="700" font-size="16" fill="#fcd34d" opacity="0.5">✨</text>
+    <text x="1400" y="720" font-size="20" fill="#fcd34d" opacity="0.6">✨</text>
+
+    <!-- Butterflies -->
+    <text x="1250" y="400" font-size="26" fill="#f9a8d4" opacity="0.5">🦋</text>
+    <text x="100" y="350" font-size="22" fill="#a78bfa" opacity="0.4">🦋</text>
+
+    <!-- Rainbow -->
+    <path d="M 30 880 Q 80 820 130 880" stroke="#f9a8d4" stroke-width="3" fill="none" opacity="0.4"/>
+    <path d="M 25 880 Q 80 810 135 880" stroke="#a78bfa" stroke-width="2" fill="none" opacity="0.3"/>
+    <path d="M 1310 100 Q 1360 50 1410 100" stroke="#6ee7b7" stroke-width="3" fill="none" opacity="0.4"/>
+
+    <!-- Dots pattern -->
+    <circle cx="450" cy="200" r="3" fill="#c4b5fd" opacity="0.4"/>
+    <circle cx="470" cy="215" r="3" fill="#c4b5fd" opacity="0.4"/>
+    <circle cx="490" cy="200" r="3" fill="#c4b5fd" opacity="0.4"/>
+    <circle cx="510" cy="215" r="3" fill="#c4b5fd" opacity="0.4"/>
+
+    <circle cx="950" cy="750" r="3" fill="#f9a8d4" opacity="0.4"/>
+    <circle cx="970" cy="765" r="3" fill="#f9a8d4" opacity="0.4"/>
+    <circle cx="990" cy="750" r="3" fill="#f9a8d4" opacity="0.4"/>
+    <circle cx="1010" cy="765" r="3" fill="#f9a8d4" opacity="0.4"/>
+
+    <!-- Moon -->
+    <text x="1370" y="780" font-size="28" fill="#fcd34d" opacity="0.5">🌙</text>
+    <text x="55" y="160" font-size="20" fill="#fcd34d" opacity="0.4">⭐</text>
+    <text x="1290" y="55" font-size="16" fill="#fcd34d" opacity="0.4">⭐</text>
+  </svg>
+
+  <div class="app">
+    <!-- HEADER -->
+    <div class="header">
+      <h1>🌸 My Tasks</h1>
+      <p class="date" id="date"></p>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="stat-box">
+        <span class="stat-num" id="total">0</span>
+        <span class="stat-label">Total</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num" id="pending">0</span>
+        <span class="stat-label">Pending</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num" id="completed">0</span>
+        <span class="stat-label">Done</span>
+      </div>
+    </div>
+
+    <!-- INPUT -->
+    <div class="input-area">
+      <input type="text" id="task-input" placeholder="Add a new task... ✍️" maxlength="100" />
+      <select id="priority-select">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button id="add-btn" onclick="addTask()">Add ✦</button>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="filters">
+      <button class="filter-btn active" onclick="filterTasks('all', this)">All</button>
+      <button class="filter-btn" onclick="filterTasks('pending', this)">Pending</button>
+      <button class="filter-btn" onclick="filterTasks('completed', this)">Completed</button>
+      <button class="clear-btn" onclick="clearCompleted()">Clear Done</button>
+    </div>
+
+    <!-- TASK LIST -->
+    <ul class="task-list" id="task-list"></ul>
+
+    <!-- EMPTY STATE -->
+    <div class="empty" id="empty-state">
+      <div class="empty-icon">🌷</div>
+      <p>No tasks yet — add something lovely!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
